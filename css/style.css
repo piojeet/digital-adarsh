@@ -844,6 +844,10 @@ select {
     .hero__container {
         gap: 10vw;
     }
+
+    .hero__image-row {
+        height: 7rem;
+    }
 }
 
 @media only screen and (max-width: 375px) {
