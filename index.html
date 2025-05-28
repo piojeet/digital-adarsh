@@ -24,6 +24,11 @@
                     <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
                 </ul>
             </div>
+
+            <div class="mob__menu-btn">
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
@@ -571,6 +576,17 @@
                 });
             });
         });
+    </script>
+
+    <script>
+        let menuBtn = document.querySelector('.mob__menu-btn');
+        let menuList = document.querySelector('.menu');
+
+        menuBtn.addEventListener('click', ()=> {
+            menuList.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+            document.body.classList.toggle('active');
+        })
     </script>
 
 
