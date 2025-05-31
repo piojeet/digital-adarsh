@@ -32,7 +32,7 @@
 
 html,
 body {
-    background: var(--black-color);
+    background: var(--white-color);
     cursor: none;
 }
 
@@ -88,7 +88,7 @@ select {
 
 .header nav .menu__list a {
     text-decoration: none;
-    color: var(--white-color);
+    color: var(--black-color);
     text-transform: uppercase;
     font-size: 18px;
     font-family: var(--gobold-regular);
@@ -102,7 +102,7 @@ select {
     bottom: -8px;
     width: 100%;
     height: 2px;
-    background: var(--white-color);
+    background: var(--black-color);
     left: 0;
     opacity: 0;
     transition: 0.2s ease;
@@ -115,6 +115,7 @@ select {
 
 .header .logo img {
     width: 150px;
+    filter: invert(100);
 }
 
 .hero {
@@ -162,7 +163,7 @@ select {
 
 .hero__heading {
     font-size: 55px;
-    color: var(--white-color);
+    color: var(--black-color);
     font-family: var(--gobold-bold);
 }
 
@@ -188,7 +189,7 @@ select {
     font-size: 20px;
     font-weight: 400;
     font-family: var(--gobold-regular);
-    color: var(--white-color);
+    color: var(--black-color);
     margin-top: 2rem;
     line-height: 1.5;
 }
@@ -197,7 +198,7 @@ select {
     font-size: 18px;
     font-family: var(--inter-font);
     font-weight: 400;
-    color: var(--white-color);
+    color: var(--black-color);
     margin-top: 1rem;
     line-height: 1.5;
 }
@@ -214,8 +215,13 @@ select {
     padding: 0 15px;
 }
 
+.footer__address-list {
+    list-style: none;
+}
+
 .footer__logo img {
     width: 150px;
+    filter: invert(100);
 }
 
 .footer__top {
@@ -225,7 +231,7 @@ select {
 }
 
 .footer__address-title {
-    color: var(--white-color);
+    color: var(--black-color);
     font-family: "Inter", sans-serif;
     list-style: none;
     font-size: 20px;
@@ -233,7 +239,7 @@ select {
 }
 
 .footer__address-link {
-    color: var(--white-color);
+    color: var(--black-color);
     font-family: "Inter", sans-serif;
     list-style: none;
     margin-bottom: 1rem;
@@ -256,7 +262,7 @@ select {
 
 .footer__legal-link {
     font-family: var(--inter-font);
-    color: var(--white-color);
+    color: var(--black-color);
     text-decoration: none;
     font-size: 14px;
     font-weight: 400;
@@ -267,12 +273,12 @@ select {
 }
 
 .footer__legal-link:first-child {
-    border-right: 1px solid var(--white-color);
+    border-right: 1px solid var(--border-color);
 }
 
 .footer__copyright {
     font-family: var(--inter-font);
-    color: var(--white-color);
+    color: var(--black-color);
     text-decoration: none;
     font-size: 14px;
     font-weight: 400;
@@ -282,7 +288,7 @@ select {
 
 .footer__email {
     font-family: var(--inter-font);
-    color: var(--white-color);
+    color: var(--black-color);
     text-decoration: none;
     font-size: 14px;
     font-weight: 400;
@@ -300,7 +306,7 @@ select {
 
 .footer__social-list a {
     text-decoration: none;
-    color: var(--white-color);
+    color: var(--black-color);
     opacity: .7;
 }
 
@@ -326,16 +332,30 @@ select {
     background: var(--white-color);
 }
 
-.brands__logo-list {
+/* .brands__logo-list {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     gap: 2.5rem;
-}
+} */
 
 .brands__logo-list img {
     display: block;
     width: 100%;
 }
+
+ .brands__logo-list {
+      display: flex;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+      position: relative;
+    }
+
+    .scroll-track {
+      display: flex;
+      animation: none;
+      gap: 2.5rem;
+    }
 
 .container {
     max-width: 1348px;
@@ -345,13 +365,13 @@ select {
 }
 
 .creator-title {
-    color: var(--white-color);
+    color: var(--black-color);
 }
 
 .section-subtitle {
     font-family: var(--inter-font);
     font-weight: 400;
-    color: var(--white-color);
+    color: var(--black-color);
     font-size: 18px;
     margin-top: 1.5rem;
 }
@@ -379,9 +399,9 @@ select {
 }
 
 .icon-wrapper {
-    background: var(--border-color);
-    border: 4px solid var(--black-color);
-    box-shadow: 0 0 0 2px var(--white-color);
+    background: #e2e2e2;
+    border: 4px solid var(--white-color);
+    box-shadow: 0 0 0 2px var(--border-color);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -403,7 +423,7 @@ select {
     align-items: center;
     font-size: 18px;
     font-family: var(--gobold-regular);
-    color: var(--white-color);
+    color: var(--black-color);
     gap: 1rem;
 }
 
@@ -417,7 +437,7 @@ select {
 .solution-description {
     font-size: 16px;
     font-family: var(--inter-font);
-    color: var(--white-color);
+    color: var(--black-color);
     line-height: 1.5;
     max-height: 0;
     overflow: hidden;
@@ -442,7 +462,7 @@ select {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: var(--white-color);
+    background: var(--black-color);
 }
 
 .solution-deco .plus {
@@ -452,7 +472,7 @@ select {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: var(--white-color);
+    background: var(--black-color);
 }
 
 .solution-box.active .solution-description {
@@ -468,7 +488,7 @@ select {
 }
 
 .latest-work-wrapper-title {
-    color: var(--white-color);
+    color: var(--black-color);
 }
 
 .latest-work-grid {
@@ -516,13 +536,13 @@ select {
 .ease-heading {
     font-family: var(--gobold-regular);
     font-size: 20px;
-    color: var(--white-color);
+    color: var(--black-color);
     font-weight: 500;
 }
 
 .ease-description {
     font-family: var(--inter-font);
-    color: var(--white-color);
+    color: var(--black-color);
     font-weight: 300;
     line-height: 1.5;
     margin-top: 2rem;
@@ -557,14 +577,14 @@ select {
     font-size: 25px;
     font-family: var(--inter-font);
     font-weight: 500;
-    color: var(--white-color);
+    color: var(--black-color);
     line-height: 1.3;
 }
 
 .testimonial-client {
     font-family: var(--inter-font);
     font-size: 18px;
-    color: var(--white-color);
+    color: var(--black-color);
     font-weight: 500;
     opacity: .7;
     margin-top: 1.5rem;
@@ -597,7 +617,7 @@ select {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
     border: 2px solid var(--white-color);
     border-radius: 5px;
 }
@@ -615,6 +635,9 @@ select {
     font-family: var(--inter-font);
     font-size: 16px;
     border-radius: 8px;
+    background: transparent;
+    outline: none;
+    border: 1px solid var(--border-color);
 }
 
 .form-submit-button {
@@ -623,6 +646,10 @@ select {
     font-family: var(--inter-font);
     font-size: 16px;
     border-radius: 8px;
+    background: var(--black-color);
+    color: var(--white-color);
+    outline: none;
+    border: none;
 }
 
 .select-box label {
@@ -633,13 +660,13 @@ select {
 }
 
 .contact-heading {
-    color: var(--white-color);
+    color: var(--black-color);
 }
 
 .contact-description {
     font-family: var(--inter-font);
     font-size: 18px;
-    color: var(--white-color);
+    color: var(--black-color);
     font-weight: 400;
     line-height: 1.3;
     margin-top: 1.5rem;
@@ -655,7 +682,7 @@ select {
 .contact-role {
     font-family: var(--inter-font);
     font-weight: 400;
-    color: var(--white-color);
+    color: var(--black-color);
     opacity: .7;
     margin-top: 10px;
 }
@@ -681,6 +708,10 @@ select {
 
     .custom-cursor {
         display: none;
+    }
+
+    body {
+        cursor: auto;
     }
 
     .contact-wrapper {
@@ -747,7 +778,7 @@ select {
         left: 0;
         width: 100%;
         height: 2px;
-        background: var(--white-color);
+        background: var(--black-color);
         transition: 0.3s ease;
     }
 
@@ -793,9 +824,10 @@ select {
     .menu__list {
         width: 100%;
         height: 100%;
-        background-color: var(--black-color);
+        background-color: var(--white-color);
         flex-direction: column;
         padding-top: 2rem;
+        border-top: 1px solid var(--border-color);
     }
 
     .header .logo img,
@@ -818,6 +850,10 @@ select {
 
     .hero__container {
         padding: 60px 0;
+    }
+
+    .contact-form {
+        gap: 1.5rem;
     }
 
 }
@@ -847,6 +883,18 @@ select {
 
     .hero__image-row {
         height: 7rem;
+    }
+
+    .brands__logo-list img {
+        width: 80px;
+    }
+
+    .scroll-track {
+        gap: 1.5rem;
+    }
+
+    .contact-form {
+        gap: 1rem;
     }
 }
 

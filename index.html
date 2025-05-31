@@ -14,14 +14,14 @@
 <body>
     <header class="header">
         <nav class="nav">
-            <div class="logo"><a href="#"><img src="assets/oie_j6W7wURSvnSo.png" alt="logo"></a></div>
+            <div class="logo"><a href="index.html"><img src="assets/oie_j6W7wURSvnSo.png" alt="logo"></a></div>
 
             <div class="menu">
                 <ul class="menu__list">
-                    <li class="menu__item"><a href="#" class="menu__link">services</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">About</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Work</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+                    <li class="menu__item"><a data-target="services" class="menu__link">services</a></li>
+                    <li class="menu__item"><a data-target="work" class="menu__link">Work</a></li>
+                    <li class="menu__item"><a data-target="about" class="menu__link">About</a></li>
+                    <li class="menu__item"><a data-target="contact" class="menu__link">Contact</a></li>
                 </ul>
             </div>
 
@@ -108,36 +108,26 @@
         <section class="brands">
             <div class="brands__container">
                 <h2 class="brands__title same-h2">700+ Brands Trust Confluencr</h2>
-                <div class="brands__logo-list">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
-                    <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo">
+                <div class="brands__logo-list" id="logoContainer">
+                    <div class="scroll-track" id="scrollTrack">
+                        <!-- Original images -->
+                        <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo" />
+                        <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo" />
+                        <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo" />
+                        <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo" />
+                        <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo" />
+                        <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo" />
+                        <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo" />
+                        <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo" />
+                        <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo" />
+                        <img src="assets/893ff7139acb5f3428dd3825967c1d16.w2834.h900.png" alt="img" class="brands__logo" />
+                        <!-- Add more as needed -->
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="creator-section">
+        <section class="creator-section" id="services">
             <div class="container">
                 <h2 class="same-h2 creator-title">Creator-Led Content Marketing Solutions</h2>
                 <p class="section-subtitle">
@@ -275,7 +265,7 @@
             </div>
         </section>
 
-        <section class="latest-work-section">
+        <section class="latest-work-section" id="work">
             <div class="latest-work-wrapper">
                 <h2 class="brands__title same-h2 latest-work-wrapper-title">Our Latest Work</h2>
                 <div class="latest-work-grid">
@@ -295,7 +285,7 @@
             </div>
         </section>
 
-        <section class="ease-section">
+        <section class="ease-section" id="about">
             <div class="ease-container">
                 <h2 class="brands__title same-h2 latest-work-wrapper-title ease-title">
                     It’s Never Been Easier.
@@ -399,7 +389,7 @@
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M29.8017 7.05642L22.9837 0.238334C22.7388 -0.0476569 22.3084 -0.080996 22.0224 0.16398C21.7364 0.408898 21.703 0.83932 21.948 1.12531C21.9709 1.15197 21.9957 1.17687 22.0224 1.19966L27.6745 6.85867H0.681785C0.305268 6.85867 0 7.16393 0 7.54051C0 7.91709 0.305268 8.2223 0.681785 8.2223H27.6745L22.0224 13.8744C21.7364 14.1194 21.703 14.5498 21.948 14.8358C22.193 15.1218 22.6234 15.1551 22.9093 14.9101C22.936 14.8873 22.9609 14.8624 22.9837 14.8358L29.8018 8.01769C30.0661 7.75185 30.0661 7.32237 29.8017 7.05642Z"
-                                    fill="#fff" />
+                                    fill="#000" />
                             </svg>
                         </div>
                         <div class="swiper-button-next-t cursor-pointer">
@@ -407,7 +397,7 @@
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M29.8017 7.05642L22.9837 0.238334C22.7388 -0.0476569 22.3084 -0.080996 22.0224 0.16398C21.7364 0.408898 21.703 0.83932 21.948 1.12531C21.9709 1.15197 21.9957 1.17687 22.0224 1.19966L27.6745 6.85867H0.681785C0.305268 6.85867 0 7.16393 0 7.54051C0 7.91709 0.305268 8.2223 0.681785 8.2223H27.6745L22.0224 13.8744C21.7364 14.1194 21.703 14.5498 21.948 14.8358C22.193 15.1218 22.6234 15.1551 22.9093 14.9101C22.936 14.8873 22.9609 14.8624 22.9837 14.8358L29.8018 8.01769C30.0661 7.75185 30.0661 7.32237 29.8017 7.05642Z"
-                                    fill="#fff" />
+                                    fill="#000" />
                             </svg>
                         </div>
                     </div>
@@ -415,7 +405,7 @@
             </div>
         </section>
 
-        <section class="contact-section">
+        <section class="contact-section" id="contact">
             <div class="contact-wrapper">
                 <div class="contact-form-wrapper">
                     <form action="#" class="contact-form">
@@ -512,7 +502,21 @@
         });
     </script>
 
+    <script>
+        const linksnav = document.querySelectorAll('.menu__link');
 
+        linksnav.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('data-target');
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 
 
     <script>
@@ -582,13 +586,38 @@
         let menuBtn = document.querySelector('.mob__menu-btn');
         let menuList = document.querySelector('.menu');
 
-        menuBtn.addEventListener('click', ()=> {
+        menuBtn.addEventListener('click', () => {
             menuList.classList.toggle('active');
             menuBtn.classList.toggle('active');
             document.body.classList.toggle('active');
         })
     </script>
 
+
+<script>
+    const scrollTrack = document.getElementById('scrollTrack');
+    const logoContainer = document.getElementById('logoContainer');
+
+    // Step 1: Duplicate the logos to create a seamless loop
+    scrollTrack.innerHTML += scrollTrack.innerHTML;
+
+    // Step 2: Set up variables for scrolling
+    let position = 0;
+    const speed = 1.5; // px per frame
+
+    function animate() {
+      position -= speed;
+      // Reset position when half the scroll track has moved
+      if (Math.abs(position) >= scrollTrack.scrollWidth / 2) {
+        position = 0;
+      }
+      scrollTrack.style.transform = `translateX(${position}px)`;
+      requestAnimationFrame(animate);
+    }
+
+    // Start animation
+    animate();
+  </script>
 
 </body>
 
