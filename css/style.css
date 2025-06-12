@@ -7,40 +7,40 @@
 }
 
 @font-face {
-  font-family: 'Gobold Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Gobold Regular'),
-       url('../fonts/Gobold Regular.woff2') format('woff2'),
-       url('../fonts/Gobold Regular.woff') format('woff');
-  font-display: swap;
+    font-family: 'Gobold Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gobold Regular'),
+        url('../fonts/Gobold Regular.woff2') format('woff2'),
+        url('../fonts/Gobold Regular.woff') format('woff');
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gobold Bold';
-  font-style: normal;
-  font-weight: bold;
-  src: local('Gobold Bold'),
-       url('../fonts/Gobold Bold.woff2') format('woff2'),
-       url('../fonts/Gobold Bold.woff') format('woff');
-  font-display: swap;
+    font-family: 'Gobold Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Gobold Bold'),
+        url('../fonts/Gobold Bold.woff2') format('woff2'),
+        url('../fonts/Gobold Bold.woff') format('woff');
+    font-display: swap;
 }
 
 :root {
-  --black-color: #000000;
-  --white-color: #ffffff;
-  --border-color: #2e2e2e;
-  --inter-font: "Inter", sans-serif;
-  --gobold-regular: 'Gobold Regular', sans-serif;
-  --gobold-bold: 'Gobold Bold', sans-serif;
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --border-color: #2e2e2e;
+    --inter-font: "Inter", sans-serif;
+    --gobold-regular: 'Gobold Regular', sans-serif;
+    --gobold-bold: 'Gobold Bold', sans-serif;
 }
 
 html,
 body {
-  background: var(--white-color);
-  cursor: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background: var(--white-color);
+    cursor: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 
@@ -73,10 +73,14 @@ select {
     transform: scale(2);
 }
 
+.header {
+    padding: 0 100px;
+}
+
 .header nav {
     max-width: 1348px;
     width: 100%;
-    padding: 10px 15px;
+    padding: 10px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -127,10 +131,8 @@ select {
 }
 
 .hero {
-    max-width: 1348px;
-    width: 100%;
-    margin: auto;
-    padding: 0 15px;
+
+    padding: 0 100px;
 }
 
 .hero__container {
@@ -138,10 +140,14 @@ select {
     /* grid-template-columns: 1.2fr .8fr; */
     /* gap: 5vw; */
     padding: 100px 0;
+    max-width: 1348px;
+    width: 100%;
+    margin: auto;
 }
 
 .hero__image-block {
-    column-count: 4;           /* Bas ye rakho */
+    column-count: 4;
+    /* Bas ye rakho */
     column-gap: 1rem;
     margin-top: 3rem;
 }
@@ -150,9 +156,11 @@ select {
 .hero__image-block video {
     width: 100%;
     display: block;
-    margin-bottom: 1rem;      /* margin-top se niche wale se space do */
-    border-radius: 8px;        /* optional styling */
-     break-inside: avoid;  
+    margin-bottom: 1rem;
+    /* margin-top se niche wale se space do */
+    border-radius: 8px;
+    /* optional styling */
+    break-inside: avoid;
 }
 
 
@@ -188,14 +196,14 @@ select {
 
 .footer {
     border-top: 1px solid var(--border-color);
-    padding-top: 2rem;
+    padding: 0 100px;
 }
 
 .footer__container {
     max-width: 1348px;
     width: 100%;
     margin: auto;
-    padding: 0 15px;
+    padding-top: 2rem;
 }
 
 .footer__address-list {
@@ -296,7 +304,7 @@ select {
 .brands__container {
     max-width: 1348px;
     width: 100%;
-    padding: 60px 15px;
+    padding: 60px 0;
     margin: auto;
 }
 
@@ -313,6 +321,7 @@ select {
 
 .brands {
     background: #F2D0CB;
+    padding: 0 100px;
 }
 
 .more_work-btn {
@@ -341,27 +350,31 @@ select {
     object-fit: cover;
 }
 
- .brands__logo-list {
-      overflow: hidden;
-      width: 100%;
-      position: relative;
-    }
+.brands__logo-list {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
 
-    .scroll-track {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      width: 100%;
-      flex-wrap: wrap;
-      animation: none;
-      gap: 3rem;
-      row-gap: 4rem;
-    }
+.scroll-track {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    flex-wrap: wrap;
+    animation: none;
+    gap: 3rem;
+    row-gap: 4rem;
+}
 
 .container {
     max-width: 1348px;
     width: 100%;
     margin: auto;
-    padding: 60px 15px;
+    padding: 60px 0;
+}
+
+.creator-section {
+    padding: 0 100px;
 }
 
 .creator-title {
@@ -523,7 +536,11 @@ select {
     max-width: 1348px;
     width: 100%;
     margin: auto;
-    padding: 60px 15px;
+    padding: 60px 0;
+}
+
+.latest-work-section {
+    padding: 0 100px;
 }
 
 .latest-work-grid .work-item {
@@ -544,18 +561,28 @@ select {
     gap: 7vw;
 }
 
+.ease-image video,
+.ease-image img {
+    width: 100%;
+}
+
+.ease-image {
+    width: 100%;
+}
+
+.ease-text {
+    width: 100%;
+}
+
 .ease-container {
     max-width: 1348px;
     width: 100%;
     margin: auto;
-    padding: 60px 15px;
+    padding: 60px 0;
 }
 
-.ease-heading {
-    font-family: var(--gobold-regular);
-    font-size: 20px;
-    color: var(--black-color);
-    font-weight: 500;
+.ease-section {
+    padding: 0 100px;
 }
 
 .ease-description {
@@ -574,13 +601,30 @@ select {
     max-width: 1348px;
     width: 100%;
     margin: auto;
-    padding: 60px 15px;
+    padding: 60px 0;
+}
+
+.testimonial-section {
+    padding: 0 100px;
 }
 
 .testimonial-slide {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5vw;
+}
+
+.learn_more {
+    display: block;
+    width: fit-content;
+    padding: 15px 25px;
+    font-family: var(--inter-font);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--white-color);
+    background: var(--black-color);
+    text-decoration: none;
+    margin-top: 1.5rem;
 }
 
 .testimonial-image-wrapper img {
@@ -625,10 +669,14 @@ select {
     max-width: 1348px;
     width: 100%;
     margin: auto;
-    padding: 60px 15px;
+    padding: 60px 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4vw;
+}
+
+.contact-section {
+    padding: 0 100px;
 }
 
 .contact-form {
@@ -705,23 +753,51 @@ select {
     margin-top: 10px;
 }
 
+@media only screen and (max-width: 1440px) {
+    .latest-work-grid img {
+        height: 28vw;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+.header,
+.hero,
+.brands,
+.creator-section,
+.latest-work-section,
+.ease-section,
+.testimonial-section,
+.contact-section,
+.footer {
+    padding: 0 15px;
+}
+}
+
 @media only screen and (max-width: 950px) {
     .hero__container {
         display: flex;
         flex-direction: column;
     }
 
-    .hero__image-block {
-        max-width: 400px;
-        width: 100%;
-        margin: auto;
-    }
+
 }
 
 @media only screen and (max-width: 768px) {
     .footer__top {
         display: flex;
         flex-wrap: wrap;
+    }
+
+        .hero__image-block {
+        column-count: 2;
+    }
+
+    .ease-content-wrapper {
+        margin-bottom: 3rem;
+    }
+
+    .scroll-track {
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .custom-cursor {
@@ -745,7 +821,11 @@ select {
     }
 
     .latest-work-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+        .latest-work-grid img {
+        height: 60vw;
     }
 
     .solutions-wrapper-main {
@@ -899,10 +979,6 @@ select {
         gap: 10vw;
     }
 
-    .hero__image-row {
-        height: 7rem;
-    }
-
     .brands__logo-list img {
         width: 80px;
     }
@@ -914,16 +990,8 @@ select {
     .contact-form {
         gap: 1rem;
     }
-}
 
-@media only screen and (max-width: 375px) {
-    .hero__image-row {
-        height: 6rem;
-    }
-}
-
-@media only screen and (max-width: 320px) {
-.hero__image-row {
-        height: 5rem;
+     .scroll-track {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
