@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Demo styles -->
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #000;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Swiper -->
+    <div style="display: flex;">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae facere quam porro debitis? Suscipit libero, perspiciatis, ab fugit error eum nihil laudantium vitae nisi sint, consequuntur adipisci delectus voluptate porro maiores. Placeat provident ut modi ullam cumque consectetur nesciunt adipisci, rerum, possimus, est doloribus. Eius amet atque sed repellat labore quibusdam ut quia aliquam explicabo quas, accusantium, doloremque quaerat eos consequuntur itaque sunt. Dolore ad, hic eveniet error eum laudantium explicabo voluptas distinctio sequi ducimus quos eius repellat sit tempore, veritatis omnis ullam. Fugiat pariatur fuga quam odio sapiente amet dolorum consequatur, perspiciatis quos eaque eum molestias et repudiandae recusandae!</div>
+                <div class="swiper-slide">Slide 2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi quas numquam magni dolore aperiam aut error, iure dolorem assumenda saepe explicabo dolores dolorum in voluptatibus deserunt corrupti doloremque alias? Earum suscipit minima omnis quia non placeat officiis molestias ipsam nesciunt. Repellat, illum? Maxime perspiciatis dicta harum optio illo deserunt animi minus, excepturi blanditiis numquam nisi doloremque repellendus, amet modi alias quos architecto officiis. Est fugiat fugit exercitationem similique explicabo, neque minus veniam laborum nihil, quis illum iusto assumenda maxime sapiente repellendus modi. Esse ipsam dolor officiis quas officia assumenda magni temporibus, possimus et nostrum adipisci sequi beatae accusantium velit distinctio!</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+            </div>
+        </div>
+
+            <div class="testimonial-image-wrapper">
+                <video muted autoplay loop class="testimonial-image">
+                    <source
+                        src="https://res.cloudinary.com/dwf7aydzq/video/upload/v1751037235/WhatsApp_Video_2025-06-27_at_4.10.35_PM_ww2pvn.mp4">
+                </video>
+            </div>
+
+
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {});
+    </script>
+</body>
+
+</html>
