@@ -290,7 +290,7 @@ select {
     display: flex;
     align-items: center;
     gap: 1rem;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     list-style: none;
     margin-top: 10px;
 }
@@ -347,7 +347,8 @@ select {
 .brands__logo-list img {
     display: block;
     width: 80%;
-    object-fit: cover;
+    object-fit: contain;
+    margin: auto;
 }
 
 .brands__logo-list {
@@ -510,12 +511,14 @@ select {
     gap: 1rem;
 }
 
-.latest-work-grid img {
+.latest-work-grid .work-item__image {
     width: 100%;
     height: 20vw;
     object-fit: cover;
     transform: scale(1.1);
+    display: block;
     transition: all .3s ease;
+    filter: brightness(70%);
 }
 
 .view-btn {
@@ -548,10 +551,70 @@ select {
     overflow: hidden;
     display: block;
     transition: 0.2s;
+    position: relative;
 }
 
-.latest-work-grid .work-item:hover img {
+.latest-work-grid .work-item:hover .work-item__image {
     transform: scale(1);
+}
+
+.work-item__content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: .5rem;
+}
+
+.work-item__content .work-item__logo {
+    width: 150px;
+    filter: grayscale(100) invert(100);
+}
+
+.work-item__metrics {
+    width: 100%;
+    background: #ffffffa2;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 8px;
+}
+
+.mb-content {
+    margin-bottom: 3rem;
+}
+
+.work-item__metrics .work-item__metric {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.work-item__metric-label {
+    font-size: 12px;
+    font-family: var(--gobold-regular);
+    font-weight: 400;
+    color: var(--black-color);
+    text-align: center;
+}
+
+.work-item__metric-value {
+    font-size: 18px;
+    font-family: var(--gobold-bold);
+    color: var(--black-color);
+    text-align: center;
+}
+
+.work-item__title {
+    font-size: 25px;
+    font-family: var(--gobold-bold);
+    color: var(--white-color);
 }
 
 .ease-content-wrapper {
@@ -627,12 +690,19 @@ select {
     margin-top: 1.5rem;
 }
 
-.testimonial-image-wrapper img {
+.testimonial-image-wrapper img,
+.testimonial-image-wrapper video {
     width: 100%;
 }
 
 .testimonial-content {
     align-content: center;
+}
+
+.testi-logo img {
+    max-width: 150px;
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
 .testimonial-quote {
@@ -754,23 +824,24 @@ select {
 }
 
 @media only screen and (max-width: 1440px) {
-    .latest-work-grid img {
+    .latest-work-grid .work-item__image {
         height: 28vw;
     }
 }
 
 @media only screen and (max-width: 1024px) {
-.header,
-.hero,
-.brands,
-.creator-section,
-.latest-work-section,
-.ease-section,
-.testimonial-section,
-.contact-section,
-.footer {
-    padding: 0 15px;
-}
+
+    .header,
+    .hero,
+    .brands,
+    .creator-section,
+    .latest-work-section,
+    .ease-section,
+    .testimonial-section,
+    .contact-section,
+    .footer {
+        padding: 0 15px;
+    }
 }
 
 @media only screen and (max-width: 950px) {
@@ -788,7 +859,15 @@ select {
         flex-wrap: wrap;
     }
 
-        .hero__image-block {
+    .work-item__content .work-item__logo {
+        width: 100px;
+    }
+
+    .work-item__title {
+        font-size: 20px;
+    }
+
+    .hero__image-block {
         column-count: 2;
     }
 
@@ -824,7 +903,7 @@ select {
         grid-template-columns: repeat(1, 1fr);
     }
 
-        .latest-work-grid img {
+    .latest-work-grid .work-item__image {
         height: 60vw;
     }
 
@@ -975,9 +1054,9 @@ select {
         gap: 1.5rem;
     }
 
-    .hero__container {
+    /* .hero__container {
         gap: 10vw;
-    }
+    } */
 
     .brands__logo-list img {
         width: 80px;
@@ -991,7 +1070,22 @@ select {
         gap: 1rem;
     }
 
-     .scroll-track {
+    .scroll-track {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .work-item__content .work-item__logo {
+        width: 60px;
+    }
+
+    .testi-logo img {
+        width: 90px;
+        margin-bottom: .5rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .work-item__metrics {
+        display: none;
     }
 }
