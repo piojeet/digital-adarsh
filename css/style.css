@@ -795,7 +795,7 @@ select {
     font-family: var(--inter-font);
     font-weight: 400;
     font-size: 16px;
-    color: var(--white-color);
+    color: var(--black-color);
 }
 
 .contact-heading {

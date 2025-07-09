@@ -9,6 +9,49 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Digital Adarsh</title>
+
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .error-msg {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+            position: absolute;
+            bottom: -1rem;
+        }
+
+        .select-box {
+            position: relative;
+        }
+
+        .error-border {
+            border: 1px solid red !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -66,7 +109,7 @@
                     </div>
 
                     <div class="hero__image-row">
-                         <video autoplay muted loop>
+                        <video autoplay muted loop>
                             <source
                                 src="https://res.cloudinary.com/dwf7aydzq/video/upload/v1751087576/instasave.website_AQMyudIra1LMebH_s7VjpLZC_F4Gyd-TvIwNB9TwUNFKbWWhMDqSt7fSf1mPeG1oh_KQdY2LGLZr0shteqZijDcs-jEWtOwlZNlyzm4_1_q9qhfp.mp4">
                         </video>
@@ -98,7 +141,7 @@
 
 
                     <div class="hero__image-row">
-                         <video autoplay muted loop playsinline>
+                        <video autoplay muted loop playsinline>
                             <source
                                 src="https://res.cloudinary.com/dwf7aydzq/video/upload/v1751092099/SaveClip.App_AQOQdwYrFMpB4EFV4tP_8FSNpK7_RQ7i0N2-aEYHgLdGnu7Hm8A-6n9gKK-_ApErqZNe2Ff5YsYvY1iURRJWLZxphVUI5a7_uEEYikM_1_v4qmyl.mp4">
                         </video>
@@ -547,12 +590,16 @@
                                     <div class="testimonial-slide">
                                         <div class="testimonial-content">
                                             <div class="testi-logo">
-                                                
-                                                    <img src="https://res.cloudinary.com/dwf7aydzq/image/upload/v1751062475/cropped-1684871295_bcn1ul_hfxlub.webp"
+
+                                                <img src="https://res.cloudinary.com/dwf7aydzq/image/upload/v1751062475/cropped-1684871295_bcn1ul_hfxlub.webp"
                                                     alt="">
                                             </div>
                                             <p class="testimonial-quote">
-                                                “The collaboration helped us tap into the right kind of creators—especially educators who could break down why hair fall happens and where our product fits in. It didn’t feel like a sales push; it felt like a conversation. That trust built through content made a huge difference.”
+                                                “The collaboration helped us tap into the right kind of
+                                                creators—especially educators who could break down why hair fall happens
+                                                and where our product fits in. It didn’t feel like a sales push; it felt
+                                                like a conversation. That trust built through content made a huge
+                                                difference.”
                                             </p>
                                             <p class="testimonial-client">Traya Health</p>
 
@@ -569,7 +616,11 @@
                                                     alt="">
                                             </div>
                                             <p class="testimonial-quote">
-                                                 "We were looking for scale, but not just in numbers—quality engagement was key. The team helped us craft a clear approach that focused on regional reach, creator credibility, and content formats that actually worked for our app. We reached the right audiences with content that stuck."
+                                                "We were looking for scale, but not just in numbers—quality engagement
+                                                was key. The team helped us craft a clear approach that focused on
+                                                regional reach, creator credibility, and content formats that actually
+                                                worked for our app. We reached the right audiences with content that
+                                                stuck."
                                             </p>
                                             <p class="testimonial-client">Kuku FM</p>
 
@@ -586,7 +637,10 @@
                                                     alt="">
                                             </div>
                                             <p class="testimonial-quote">
-                                                 They really helped us speed up our campaign cycle without cutting corners. From product dispatch to final content delivery, the turnaround time was super quick. What stood out was how aligned the creators were with our brand—they got the message right from the start."
+                                                They really helped us speed up our campaign cycle without cutting
+                                                corners. From product dispatch to final content delivery, the turnaround
+                                                time was super quick. What stood out was how aligned the creators were
+                                                with our brand—they got the message right from the start."
                                             </p>
                                             <p class="testimonial-client">Oziva</p>
 
@@ -636,18 +690,22 @@
         <section class="contact-section" id="contact">
             <div class="contact-wrapper">
                 <div class="contact-form-wrapper">
-                    <form action="#" class="contact-form">
+                    <form id="contactForm" class="contact-form" novalidate>
                         <div class="select-box">
-                            <label for="select" class="form-label">Are you representing *</label>
-                            <select name="select" id="select" required class="form-select">
-                                <option value="Please select On">Please select On</option>
-                                <option value="A">Agency</option>
-                                <option value="B">Brand</option>
+                            <label for="representing" class="form-label">Are you representing *</label>
+                            <select name="representing" id="representing" required class="form-select">
+                                <option value="">Please select</option>
+                                <option value="Agency">Agency</option>
+                                <option value="Brand">Brand</option>
                             </select>
+                            <span id="selectError" class="error-msg">Please select an option</span>
                         </div>
-                        <input type="text" placeholder="Your Name" required class="form-input" />
-                        <input type="email" placeholder="Your Email" required class="form-input" />
-                        <input type="text" placeholder="Your Contact Number" required class="form-input" />
+
+                        <input type="text" id="name" name="name" placeholder="Your Name" required class="form-input" />
+                        <input type="email" id="email" name="email" placeholder="Your Email" required
+                            class="form-input" />
+                        <input type="text" id="contact" name="contact" placeholder="Your Contact Number" required
+                            class="form-input" />
                         <button type="submit" class="form-submit-button">Submit</button>
                     </form>
                 </div>
@@ -678,6 +736,15 @@
                 </div>
             </div>
         </section>
+
+        <!-- Modal -->
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <h3>Thank you!</h3>
+                <p>Your form has been submitted successfully.</p>
+                <button onclick="document.getElementById('successModal').classList.remove('show')">Close</button>
+            </div>
+        </div>
 
 
     </main>
@@ -743,6 +810,81 @@
             });
         });
     </script>
+
+    <script>
+        const form = document.getElementById("contactForm");
+        const select = document.getElementById("representing");
+        const selectError = document.getElementById("selectError");
+        const inputs = form.querySelectorAll("input");
+
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            let isValid = true;
+
+            // Validate select
+            if (!select.value) {
+                select.classList.add("error-border");
+                selectError.style.display = "block";
+                isValid = false;
+            } else {
+                select.classList.remove("error-border");
+                selectError.style.display = "none";
+            }
+
+            // Validate all input fields
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    input.classList.add("error-border");
+                    isValid = false;
+                } else {
+                    input.classList.remove("error-border");
+                }
+            });
+
+            if (!isValid) return;
+
+            const data = {
+                representing: select.value,
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                contact: document.getElementById("contact").value,
+            };
+
+            try {
+                await fetch("https://script.google.com/macros/s/AKfycbzs_c9IH8M_P-NoTbPH6ev7caJqGWNmocUeBqPjyutuRdooGiSH2128NiYjq4qnZT6W/exec", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data)
+                });
+
+                form.reset();
+                document.getElementById("successModal").classList.add("show");
+                // Remove red borders if any
+                select.classList.remove("error-border");
+                inputs.forEach(input => input.classList.remove("error-border"));
+            } catch (error) {
+                console.error("Submit Error:", error);
+            }
+        });
+
+        // Remove red border on input/select change
+        select.addEventListener("change", () => {
+            if (select.value) {
+                select.classList.remove("error-border");
+                selectError.style.display = "none";
+            }
+        });
+
+        inputs.forEach(input => {
+            input.addEventListener("input", () => {
+                if (input.value.trim()) {
+                    input.classList.remove("error-border");
+                }
+            });
+        });
+    </script>
+
 
     <script src="js/script.js"></script>
 
