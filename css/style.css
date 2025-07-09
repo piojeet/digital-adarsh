@@ -826,6 +826,44 @@ select {
     margin-top: 10px;
 }
 
+#popup {
+    max-width: 300px;
+    height: fit-content;
+    width: 90%;
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--white-color);
+    box-shadow: 0px 0px 10px #2e2e2e57;
+    padding: 1.5rem;
+    text-align: center;
+    z-index: 1000;
+    border-radius: 10px;
+    display: none;
+}
+
+#popup p {
+    font-size: 20px;
+    font-family: var(--inter-font);
+    font-weight: 600;
+    color: var(--black-color);
+    margin-bottom: 1rem;
+}
+
+#popup button {
+        height: 45px;
+    padding: 0 20px;
+    font-family: var(--inter-font);
+    font-size: 16px;
+    border-radius: 8px;
+    background: var(--black-color);
+    color: var(--white-color);
+    outline: none;
+    border: none;
+}
+
 @media only screen and (max-width: 1440px) {
     .latest-work-grid .work-item__image {
         height: 28vw;
